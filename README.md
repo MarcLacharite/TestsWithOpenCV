@@ -1,4 +1,4 @@
 TestsWithOpenCV
 ===============
 
-This repository is to test OpenCV functionnalities and share the results with my friends
+This repository is to test OpenCV functionnalities for the Elikos Student Society at Polytechnique Montreal
