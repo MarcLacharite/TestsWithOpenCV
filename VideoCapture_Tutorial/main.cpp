@@ -7,13 +7,13 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    string filePath = "Test.avi";
-    double fps = 30;
+    const char* fileName = "Test.avi";
+    double fps = 20;
 
-    remove("Test.avi");
+    remove(fileName);
 
     VideoCapture cap(0); // open the video camera no. 0
-    cap.set(CV_CAP_PROP_FPS,30);
+    cap.set(CV_CAP_PROP_FPS,fps);
 
     double dWidth = cap.get(CV_CAP_PROP_FRAME_WIDTH); //get the width of frames of the video
     double dHeight = cap.get(CV_CAP_PROP_FRAME_HEIGHT); //get the height of frames of the video
@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
 
         if(!videoOutput.isOpened())
         {
-            videoOutput.open(filePath, CV_FOURCC('P','I','M','1'),fps, frameSize,true);
+            videoOutput.open(fileName, CV_FOURCC('D','I','V','X'),fps, frameSize,true);
             if(!videoOutput.isOpened())
             {
                 cout<<"Error : can't write to file"<<endl;
